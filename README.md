@@ -1,1 +1,1 @@
-# Godity Docs : https://samueldev45.github.io/godity/docs/
+Godity Docs : https://samueldev45.github.io/godity/docs/
