@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Core - Godity Framework Docs</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Core";
+    var mkdocs_page_input_path = "core.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Godity Framework Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Notes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../notes/">Release Notes</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Python API</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Core</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#app">App</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#variables">Variables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#methods">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#component">Component</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#variables_1">Variables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_1">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#entity">Entity</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#variables_2">Variables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_2">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#layer">Layer</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#variables_3">Variables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_3">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scene">Scene</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#variables_4">Variables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_4">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#timer">Timer</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#variables_5">Variables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_5">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#window">Window</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#variables_6">Variables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_6">Methods</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../components/">Components</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../math/">Math</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../general/">General</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Godity Framework Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Python API &raquo;</li>
+        
+      
+    
+    <li>Core</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="core">Core</h1>
+<h2 id="app">App</h2>
+<pre><code class="language-python">__init__(width : int, height : int, title : str, |OPTIONAL| flags : int &lt;0&gt;, fps : float &lt;60&gt;, exit_key : int &lt;pygame.K_ESCAPE&gt;)
+</code></pre>
+<h5 id="variables">Variables</h5>
+<pre><code class="language-python">gravity       : float &lt;9.807&gt;
+physics_color : tuple &lt;(255,255,255)&gt;
+exit_key      : int
+window        : godity.core.Window
+</code></pre>
+<h5 id="methods">Methods</h5>
+<pre><code class="language-python">#overwrite methods
+start()
+update()
+render()
+end()
+</code></pre>
+<pre><code class="language-python">loadImage(name : str, path : str, |OPTIONAL| convert_alpha : bool &lt;False&gt;)
+</code></pre>
+<pre><code class="language-python">getImage(name : str) -&gt; pygame.Surface
+</code></pre>
+<pre><code class="language-python">updateImage(name : str, path : str, |OPTIONAL| convert_alpha : bool &lt;False&gt;)
+</code></pre>
+<pre><code class="language-python">deleteImage(name : str)
+</code></pre>
+<pre><code class="language-python">loadAudio(name : str, path : str)
+</code></pre>
+<pre><code class="language-python">getAudio(name : str) -&gt; pygame.mixer.Sound
+</code></pre>
+<pre><code class="language-python">playAudio(name : str)
+</code></pre>
+<pre><code class="language-python">stopAudio(name : str)
+</code></pre>
+<pre><code class="language-python">deleteAudio(name : str)
+</code></pre>
+<pre><code class="language-python">getEvents() -&gt; list
+</code></pre>
+<pre><code class="language-python">getClock() -&gt; pygame.time.Clock()
+</code></pre>
+<pre><code class="language-python">getFlags() -&gt; int
+</code></pre>
+<pre><code class="language-python">getDeltaTime() -&gt; float
+</code></pre>
+<pre><code class="language-python">getScene() -&gt; godity.core.Scene
+</code></pre>
+<pre><code class="language-python">setFps(value : float)
+</code></pre>
+<pre><code class="language-python">close()
+</code></pre>
+<pre><code class="language-python">run()
+</code></pre>
+<h2 id="component">Component</h2>
+<pre><code class="language-python">__init__(name : str, args : dict)
+</code></pre>
+<h5 id="variables_1">Variables</h5>
+<pre><code class="language-python">name   : str
+args   : dict
+entity : godity.core.Entity &lt;None&gt;
+</code></pre>
+<h5 id="methods_1">Methods</h5>
+<pre><code class="language-python">start()
+</code></pre>
+<pre><code class="language-python">update()
+</code></pre>
+<h2 id="entity">Entity</h2>
+<pre><code class="language-python">__init__(name : str)
+</code></pre>
+<h5 id="variables_2">Variables</h5>
+<pre><code class="language-python">name      : str
+childrens : list
+layer     : godity.core.Layer &lt;None&gt;
+Scene     : godity.core.Scene &lt;None&gt;
+</code></pre>
+<h5 id="methods_2">Methods</h5>
+<pre><code class="language-python">add(component : godity.core.Component)
+</code></pre>
+<pre><code class="language-python">remove(component : str)
+</code></pre>
+<pre><code class="language-python">has(component : str)
+</code></pre>
+<pre><code class="language-python">get(component : str)
+</code></pre>
+<pre><code class="language-python">addTag(name : str)
+</code></pre>
+<pre><code class="language-python">removeTag(name : str)
+</code></pre>
+<pre><code class="language-python">hasTag(name : str)
+</code></pre>
+<pre><code class="language-python">parent(entity : godity.core.Entity, |OPTIONAL| offset_x : int &lt;0&gt;, offset_y : int &lt;0&gt;)
+</code></pre>
+<pre><code class="language-python">clearParent()
+</code></pre>
+<pre><code class="language-python">getChildrens()
+</code></pre>
+<pre><code class="language-python">getLayer()
+</code></pre>
+<pre><code class="language-python">getScene()
+</code></pre>
+<pre><code class="language-python">update()
+</code></pre>
+<pre><code class="language-python">end()
+</code></pre>
+<h2 id="layer">Layer</h2>
+<pre><code class="language-python">__init__(name : str)
+</code></pre>
+<h5 id="variables_3">Variables</h5>
+<pre><code class="language-python">name : str
+</code></pre>
+<h5 id="methods_3">Methods</h5>
+<pre><code class="language-python">add(entity : godity.core.Entity)
+</code></pre>
+<pre><code class="language-python">remove(entity : str)
+</code></pre>
+<pre><code class="language-python">getEntities() -&gt; list
+</code></pre>
+<pre><code class="language-python">getEntitiesWithComponent(component : str) -&gt; list
+</code></pre>
+<h2 id="scene">Scene</h2>
+<pre><code class="language-python">__init__(app : godity.core.App, name : str, surface_width : int, surface_height : int, |OPTIONAL| adjust_surface : bool &lt;True&gt;, render_physics : bool &lt;False&gt;, environment_light : tuple &lt;(255,255,255)&gt;, max_surface_width : int &lt;None&gt;, max_surface_height : int &lt;None&gt;)
+</code></pre>
+<h5 id="variables_4">Variables</h5>
+<pre><code class="language-python">name              : str
+render_physics    : bool
+environment_light : tuple
+background_color  : tuple &lt;(0,0,0)&gt;
+</code></pre>
+<h5 id="methods_4">Methods</h5>
+<pre><code class="language-python">addLayer(layer : godity.core.Layer)
+</code></pre>
+<pre><code class="language-python">removeLayer(layer : str)
+</code></pre>
+<pre><code class="language-python">add(entity : godity.core.Entity, layer : godity.core.Layer)
+</code></pre>
+<pre><code class="language-python">remove(entity : str, layer : str)
+</code></pre>
+<pre><code class="language-python">get(entity : str) -&gt; godity.core.Entity
+</code></pre>
+<pre><code class="language-python">getEntities() -&gt; list
+</code></pre>
+<pre><code class="language-python">getEntitiesWithComponent(component : str) -&gt; list
+</code></pre>
+<pre><code class="language-python">getSurface() -&gt; pygame.Surface
+</code></pre>
+<pre><code class="language-python">getCamera() -&gt; godity.core.Entity
+</code></pre>
+<pre><code class="language-python">setCamera(entity : godity.core.Entity)
+# the entity must have a camera component.
+</code></pre>
+<pre><code class="language-python">isRendering() -&gt; bool
+</code></pre>
+<pre><code class="language-python">isUpdating() -&gt; bool
+</code></pre>
+<pre><code class="language-python">render()
+</code></pre>
+<pre><code class="language-python">update()
+</code></pre>
+<h2 id="timer">Timer</h2>
+<pre><code class="language-python">__init__()
+</code></pre>
+<h5 id="variables_5">Variables</h5>
+<pre><code class="language-python">last_time : float
+</code></pre>
+<h5 id="methods_5">Methods</h5>
+<pre><code class="language-python">getTime() -&gt; float
+</code></pre>
+<pre><code class="language-python">resetTime()
+</code></pre>
+<h2 id="window">Window</h2>
+<pre><code class="language-python">__init__(width : int, height : int, title : str, |OPTIONAL| flags : int &lt;0&gt;)
+</code></pre>
+<h5 id="variables_6">Variables</h5>
+<pre><code class="language-python">width  : int
+height : int
+title  : str
+flags  : int
+</code></pre>
+<h5 id="methods_6">Methods</h5>
+<pre><code class="language-python">getDisplay() -&gt; pygame.Surface
+</code></pre>
+<pre><code class="language-python">clearColor(color : tuple)
+</code></pre>
+<pre><code class="language-python">update()
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../components/" class="btn btn-neutral float-right" title="Components">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../notes/" class="btn btn-neutral" title="Release Notes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../notes/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../components/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
