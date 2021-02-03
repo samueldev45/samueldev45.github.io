@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Math - Godity Framework</title>
+  <title>Math - Godity Framework Docs</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -38,7 +38,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Godity Framework</a>
+        <a href=".." class="icon icon-home"> Godity Framework Docs</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -86,7 +86,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Godity Framework</a>
+        <a href="..">Godity Framework Docs</a>
       </nav>
 
       
@@ -119,23 +119,36 @@
 </code></pre>
 <h5 id="variables">Variables</h5>
 <pre><code class="language-python">x : float
-</code></pre>
-<pre><code class="language-python">y : float
+y : float
 </code></pre>
 <h5 id="methods">Methods</h5>
-<pre><code class="language-python">add(vector2 : godity.math.Vector2) -&gt; godity.math.Vector2()
+<pre><code class="language-python">add(vector2 : godity.math.Vector2) -&gt; godity.math.Vector2
 </code></pre>
-<pre><code class="language-python">subtract(vector2 : godity.math.Vector2) -&gt; godity.math.Vector2()
+<pre><code class="language-python">subtract(vector2 : godity.math.Vector2) -&gt; godity.math.Vector2
 </code></pre>
-<pre><code class="language-python">multiply(scalar : float) -&gt; godity.math.Vector2()
+<pre><code class="language-python">multiply(scalar : float) -&gt; godity.math.Vector2
 </code></pre>
-<pre><code class="language-python">divide(scalar : float) -&gt; godity.math.Vector2()
+<pre><code class="language-python">divide(scalar : float) -&gt; godity.math.Vector2
 </code></pre>
 <pre><code class="language-python">length() -&gt; float
+lengthSquared() -&gt; float
 </code></pre>
-<pre><code class="language-python">normalize() -&gt; godity.math.Vector2()
+<pre><code class="language-python">normalize() -&gt; godity.math.Vector2
+isNormalized() -&gt; bool
 </code></pre>
-<pre><code class="language-python">copy() -&gt; godity.math.Vector2()
+<pre><code class="language-python">dot(vector2 : godity.math.Vector2) -&gt; float
+</code></pre>
+<pre><code class="language-python">cross(vector2 : godity.math.Vector2) -&gt; float
+</code></pre>
+<pre><code class="language-python">lerp(vector2 : godity.math.Vector2, value : float) -&gt; godity.math.Vector2
+</code></pre>
+<pre><code class="language-python">rotate(degrees : int) -&gt; godity.math.Vector2
+</code></pre>
+<pre><code class="language-python">rotateRad(radians : int) -&gt; godity.math.Vector2
+</code></pre>
+<pre><code class="language-python">getDistanceTo(vector2 : godity.math.Vector2) -&gt; godity.math.Vector2
+</code></pre>
+<pre><code class="language-python">copy() -&gt; godity.math.Vector2
 </code></pre>
               
             </div>

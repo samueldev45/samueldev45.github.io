@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Core - Godity Framework</title>
+  <title>Core - Godity Framework Docs</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -38,7 +38,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Godity Framework</a>
+        <a href=".." class="icon icon-home"> Godity Framework Docs</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -84,7 +84,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#scene">Scene</a>
+    <li class="toctree-l2"><a class="reference internal" href="#layer">Layer</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#variables_3">Variables</a>
     </li>
@@ -92,7 +92,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#window">Window</a>
+    <li class="toctree-l2"><a class="reference internal" href="#scene">Scene</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#variables_4">Variables</a>
     </li>
@@ -105,6 +105,14 @@
     <li class="toctree-l3"><a class="reference internal" href="#variables_5">Variables</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#methods_5">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#window">Window</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#variables_6">Variables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_6">Methods</a>
     </li>
         </ul>
     </li>
@@ -126,7 +134,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Godity Framework</a>
+        <a href="..">Godity Framework Docs</a>
       </nav>
 
       
@@ -158,16 +166,13 @@
 <pre><code class="language-python">__init__(width : int, height : int, title : str, |OPTIONAL| flags : int &lt;0&gt;, fps : float &lt;60&gt;, exit_key : int &lt;pygame.K_ESCAPE&gt;)
 </code></pre>
 <h5 id="variables">Variables</h5>
-<pre><code class="language-python">gravity : float &lt;9.807&gt;
-</code></pre>
-<pre><code class="language-python">physics_color : tuple &lt;(255,255,255)&gt;
-</code></pre>
-<pre><code class="language-python">exit_key : int
-</code></pre>
-<pre><code class="language-python">window : godity.core.Window
+<pre><code class="language-python">gravity       : float &lt;9.807&gt;
+physics_color : tuple &lt;(255,255,255)&gt;
+exit_key      : int
+window        : godity.core.Window
 </code></pre>
 <h5 id="methods">Methods</h5>
-<pre><code class="language-python"># overwrite functions
+<pre><code class="language-python">#overwrite methods
 start()
 update()
 render()
@@ -175,35 +180,33 @@ end()
 </code></pre>
 <pre><code class="language-python">loadImage(name : str, path : str, |OPTIONAL| convert_alpha : bool &lt;False&gt;)
 </code></pre>
-<pre><code class="language-python">loadAudio(name : str, path : str)
+<pre><code class="language-python">getImage(name : str) -&gt; pygame.Surface
 </code></pre>
 <pre><code class="language-python">updateImage(name : str, path : str, |OPTIONAL| convert_alpha : bool &lt;False&gt;)
 </code></pre>
-<pre><code class="language-python">getImage(name : str) -&gt; pygame.Surface
-</code></pre>
-<pre><code class="language-python">getAudio(name : str) -&gt; pygame.mixer.Sound
-</code></pre>
-<pre><code class="language-python">getFlags() -&gt; int
-</code></pre>
 <pre><code class="language-python">deleteImage(name : str)
 </code></pre>
-<pre><code class="language-python">deleteAudio(name : str)
+<pre><code class="language-python">loadAudio(name : str, path : str)
+</code></pre>
+<pre><code class="language-python">getAudio(name : str) -&gt; pygame.mixer.Sound
 </code></pre>
 <pre><code class="language-python">playAudio(name : str)
 </code></pre>
 <pre><code class="language-python">stopAudio(name : str)
 </code></pre>
-<pre><code class="language-python">getEvents() -&gt; list[] of events
+<pre><code class="language-python">deleteAudio(name : str)
 </code></pre>
-<pre><code class="language-python">getClock() -&gt; pygame.time.Clock
+<pre><code class="language-python">getEvents() -&gt; list
+</code></pre>
+<pre><code class="language-python">getClock() -&gt; pygame.time.Clock()
+</code></pre>
+<pre><code class="language-python">getFlags() -&gt; int
 </code></pre>
 <pre><code class="language-python">getDeltaTime() -&gt; float
 </code></pre>
 <pre><code class="language-python">getScene() -&gt; godity.core.Scene
 </code></pre>
-<pre><code class="language-python">setScene(scene : godity.core.Scene)
-</code></pre>
-<pre><code class="language-python">setFPS(value : float)
+<pre><code class="language-python">setFps(value : float)
 </code></pre>
 <pre><code class="language-python">close()
 </code></pre>
@@ -213,101 +216,104 @@ end()
 <pre><code class="language-python">__init__(name : str, args : dict)
 </code></pre>
 <h5 id="variables_1">Variables</h5>
-<pre><code class="language-python">name : str
-</code></pre>
-<pre><code class="language-python">args : dict
-</code></pre>
-<pre><code class="language-python">entity : godity.core.Entity &lt;None&gt;
+<pre><code class="language-python">name   : str
+args   : dict
+entity : godity.core.Entity &lt;None&gt;
 </code></pre>
 <h5 id="methods_1">Methods</h5>
-<pre><code class="language-python">#overwrite methods
-start()
-update()
+<pre><code class="language-python">start()
+</code></pre>
+<pre><code class="language-python">update()
 </code></pre>
 <h2 id="entity">Entity</h2>
 <pre><code class="language-python">__init__(name : str)
 </code></pre>
 <h5 id="variables_2">Variables</h5>
-<pre><code class="language-python">name : str
-</code></pre>
-<pre><code class="language-python">childrens : list
-</code></pre>
-<pre><code class="language-python">scene : godity.core.Scene &lt;None&gt;
+<pre><code class="language-python">name      : str
+childrens : list
+layer     : godity.core.Layer &lt;None&gt;
+Scene     : godity.core.Scene &lt;None&gt;
 </code></pre>
 <h5 id="methods_2">Methods</h5>
 <pre><code class="language-python">add(component : godity.core.Component)
 </code></pre>
-<pre><code class="language-python">addTag(name : str)
-</code></pre>
 <pre><code class="language-python">remove(component : str)
+</code></pre>
+<pre><code class="language-python">has(component : str)
+</code></pre>
+<pre><code class="language-python">get(component : str)
+</code></pre>
+<pre><code class="language-python">addTag(name : str)
 </code></pre>
 <pre><code class="language-python">removeTag(name : str)
 </code></pre>
-<pre><code class="language-python">has(component : str) -&gt; bool
+<pre><code class="language-python">hasTag(name : str)
 </code></pre>
-<pre><code class="language-python">hasTag(name : str) -&gt; bool
+<pre><code class="language-python">parent(entity : godity.core.Entity, |OPTIONAL| offset_x : int &lt;0&gt;, offset_y : int &lt;0&gt;)
 </code></pre>
-<pre><code class="language-python">get(component : str) -&gt; godity.core.Component
+<pre><code class="language-python">clearParent()
 </code></pre>
-<pre><code class="language-python">getChildrens() -&gt; list[] of godity.core.Entity
+<pre><code class="language-python">getChildrens()
 </code></pre>
-<pre><code class="language-python">getScene() -&gt; godity.core.Scene
+<pre><code class="language-python">getLayer()
 </code></pre>
-<pre><code class="language-python">parent(entity : godity.core.Entity)
-</code></pre>
-<pre><code class="language-python">end()
+<pre><code class="language-python">getScene()
 </code></pre>
 <pre><code class="language-python">update()
 </code></pre>
-<h2 id="scene">Scene</h2>
-<pre><code class="language-python">__init__(app : godity.core.App, name : str, surface_width : int, surface_height : int, |OPTIONAL| adjust_surface : bool &lt;True&gt;, render_physics : bool &lt;False&gt;)
+<pre><code class="language-python">end()
+</code></pre>
+<h2 id="layer">Layer</h2>
+<pre><code class="language-python">__init__(name : str)
 </code></pre>
 <h5 id="variables_3">Variables</h5>
 <pre><code class="language-python">name : str
 </code></pre>
-<pre><code class="language-python">render_physics : bool
-</code></pre>
-<pre><code class="language-python">background_color : tuple &lt;(0,0,0)&gt;
-</code></pre>
 <h5 id="methods_3">Methods</h5>
 <pre><code class="language-python">add(entity : godity.core.Entity)
 </code></pre>
-<pre><code class="language-python">remove(entity : godity.core.Entity)
+<pre><code class="language-python">remove(entity : str)
+</code></pre>
+<pre><code class="language-python">getEntities() -&gt; list
+</code></pre>
+<pre><code class="language-python">getEntitiesWithComponent(component : str) -&gt; list
+</code></pre>
+<h2 id="scene">Scene</h2>
+<pre><code class="language-python">__init__(app : godity.core.App, name : str, surface_width : int, surface_height : int, |OPTIONAL| adjust_surface : bool &lt;True&gt;, render_physics : bool &lt;False&gt;, environment_light : tuple &lt;(255,255,255)&gt;, max_surface_width : int &lt;None&gt;, max_surface_height : int &lt;None&gt;)
+</code></pre>
+<h5 id="variables_4">Variables</h5>
+<pre><code class="language-python">name              : str
+render_physics    : bool
+environment_light : tuple
+background_color  : tuple &lt;(0,0,0)&gt;
+</code></pre>
+<h5 id="methods_4">Methods</h5>
+<pre><code class="language-python">addLayer(layer : godity.core.Layer)
+</code></pre>
+<pre><code class="language-python">removeLayer(layer : str)
+</code></pre>
+<pre><code class="language-python">add(entity : godity.core.Entity, layer : godity.core.Layer)
+</code></pre>
+<pre><code class="language-python">remove(entity : str, layer : str)
 </code></pre>
 <pre><code class="language-python">get(entity : str) -&gt; godity.core.Entity
 </code></pre>
-<pre><code class="language-python">getEntities() -&gt; list[] of godity.core.Entity
+<pre><code class="language-python">getEntities() -&gt; list
 </code></pre>
-<pre><code class="language-python">getEntitiesWithComponent(component : str) -&gt; list[] of godity.core.Entity
+<pre><code class="language-python">getEntitiesWithComponent(component : str) -&gt; list
+</code></pre>
+<pre><code class="language-python">getSurface() -&gt; pygame.Surface
 </code></pre>
 <pre><code class="language-python">getCamera() -&gt; godity.core.Entity
 </code></pre>
-<pre><code class="language-python">setCamera(entity : godity.core.Entity) # the entity must have a camera component.
+<pre><code class="language-python">setCamera(entity : godity.core.Entity)
+# the entity must have a camera component.
 </code></pre>
 <pre><code class="language-python">isRendering() -&gt; bool
 </code></pre>
 <pre><code class="language-python">isUpdating() -&gt; bool
 </code></pre>
 <pre><code class="language-python">render()
-</code></pre>
-<pre><code class="language-python">update()
-</code></pre>
-<h2 id="window">Window</h2>
-<pre><code class="language-python">__init__(width : int, height : int, title : str, |OPTIONAL| flags : int &lt;0&gt;)
-</code></pre>
-<h5 id="variables_4">Variables</h5>
-<pre><code class="language-python">width : int
-</code></pre>
-<pre><code class="language-python">height : int
-</code></pre>
-<pre><code class="language-python">title : str
-</code></pre>
-<pre><code class="language-python">flags : int &lt;0&gt;
-</code></pre>
-<h5 id="methods_4">Methods</h5>
-<pre><code class="language-python">getDisplay() -&gt; pygame.Surface
-</code></pre>
-<pre><code class="language-python">clearColor(color : tuple)
 </code></pre>
 <pre><code class="language-python">update()
 </code></pre>
@@ -321,6 +327,22 @@ update()
 <pre><code class="language-python">getTime() -&gt; float
 </code></pre>
 <pre><code class="language-python">resetTime()
+</code></pre>
+<h2 id="window">Window</h2>
+<pre><code class="language-python">__init__(width : int, height : int, title : str, |OPTIONAL| flags : int &lt;0&gt;)
+</code></pre>
+<h5 id="variables_6">Variables</h5>
+<pre><code class="language-python">width  : int
+height : int
+title  : str
+flags  : int
+</code></pre>
+<h5 id="methods_6">Methods</h5>
+<pre><code class="language-python">getDisplay() -&gt; pygame.Surface
+</code></pre>
+<pre><code class="language-python">clearColor(color : tuple)
+</code></pre>
+<pre><code class="language-python">update()
 </code></pre>
               
             </div>

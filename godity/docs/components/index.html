@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Components - Godity Framework</title>
+  <title>Components - Godity Framework Docs</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -38,7 +38,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Godity Framework</a>
+        <a href=".." class="icon icon-home"> Godity Framework Docs</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -62,7 +62,7 @@
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Components</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#transform">Transform</a>
+    <li class="toctree-l2"><a class="reference internal" href="#animation">Animation</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#variables">Variables</a>
     </li>
@@ -70,7 +70,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#sprite-renderer">Sprite Renderer</a>
+    <li class="toctree-l2"><a class="reference internal" href="#boxcollider">BoxCollider</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#variables_1">Variables</a>
     </li>
@@ -78,7 +78,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#box-collider">Box Collider</a>
+    <li class="toctree-l2"><a class="reference internal" href="#camera">Camera</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#variables_2">Variables</a>
     </li>
@@ -86,7 +86,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#rigidbody">Rigidbody</a>
+    <li class="toctree-l2"><a class="reference internal" href="#light">Light</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#variables_3">Variables</a>
     </li>
@@ -94,7 +94,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#camera">Camera</a>
+    <li class="toctree-l2"><a class="reference internal" href="#rigidbody">Rigidbody</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#variables_4">Variables</a>
     </li>
@@ -102,7 +102,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#animation">Animation</a>
+    <li class="toctree-l2"><a class="reference internal" href="#spriterenderer">SpriteRenderer</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#variables_5">Variables</a>
     </li>
@@ -115,6 +115,14 @@
     <li class="toctree-l3"><a class="reference internal" href="#variables_6">Variables</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#methods_6">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#transform">Transform</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#variables_7">Variables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#methods_7">Methods</a>
     </li>
         </ul>
     </li>
@@ -134,7 +142,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Godity Framework</a>
+        <a href="..">Godity Framework Docs</a>
       </nav>
 
       
@@ -162,196 +170,157 @@
             <div class="section">
               
                 <h1 id="components">Components</h1>
-<h2 id="transform">Transform</h2>
-<pre><code class="language-python">__init__(|OPTIONAL| position : godity.math.Vector2 &lt;None&gt;, scale : godity.math.Vector2 &lt;None&gt;, rotation : int &lt;0&gt;)
-</code></pre>
-<h4 id="variables">Variables</h4>
-<pre><code class="language-python">position : godity.math.Vector2
-</code></pre>
-<pre><code class="language-python">scale : godity.math.Vector2
-</code></pre>
-<pre><code class="language-python">rotation : int
-</code></pre>
-<h4 id="methods">Methods</h4>
-<pre><code class="language-python">start()
-</code></pre>
-<pre><code class="language-python">move(vector2 : godity.math.Vector2)
-</code></pre>
-<pre><code class="language-python">rotate(angle : int)
-</code></pre>
-<pre><code class="language-python">setPosition(vector2 : godity.math.Vector2)
-</code></pre>
-<pre><code class="language-python">setPositionX(value : int)
-</code></pre>
-<pre><code class="language-python">setPositionY(value : int)
-</code></pre>
-<pre><code class="language-python">setRotation(angle : int)
-</code></pre>
-<pre><code class="language-python">setScale(vector2 : godity.math.Vector2)
-</code></pre>
-<pre><code class="language-python">setScaleX(value : int)
-</code></pre>
-<pre><code class="language-python">setScaleY(value : int)
-</code></pre>
-<pre><code class="language-python">updateChildrenPosition(|OPTIONAL| offset_x : int &lt;0&gt;, offset_y : int &lt;0&gt;)
-</code></pre>
-<pre><code class="language-python">update()
-</code></pre>
-<h2 id="sprite-renderer">Sprite Renderer</h2>
-<pre><code class="language-python">__init__(app : godity.core.App, image_name : str, |OPTIONAL| area : tuple &lt;None&gt;, tile_width : int &lt;0&gt;, tile_height : int &lt;0&gt;, offset_x : int &lt;0&gt;, offset_y : int &lt;0&gt;, flip_x : bool &lt;False&gt;, flip_y : bool &lt;False&gt;, smooth_scale : bool &lt;True&gt;)
-</code></pre>
-<h4 id="variables_1">Variables</h4>
-<pre><code class="language-python">image_name : str
-</code></pre>
-<pre><code class="language-python">area : tuple
-</code></pre>
-<pre><code class="language-python">tile_width : int
-</code></pre>
-<pre><code class="language-python">tile_height : int
-</code></pre>
-<pre><code class="language-python">offset_x : int
-</code></pre>
-<pre><code class="language-python">offset_y : int
-</code></pre>
-<pre><code class="language-python">flip_x : bool
-</code></pre>
-<pre><code class="language-python">flip_y : bool
-</code></pre>
-<pre><code class="language-python">smooth_scale : bool
-</code></pre>
-<pre><code class="language-python">rect : pygame.Rect
-</code></pre>
-<h4 id="methods_1">Methods</h4>
-<pre><code class="language-python">start()
-</code></pre>
-<pre><code class="language-python">updateRect()
-</code></pre>
-<pre><code class="language-python">setArea(area : tuple)
-</code></pre>
-<pre><code class="language-python">setFlip(x : bool, y : bool)
-</code></pre>
-<pre><code class="language-python">setImage(image_path : str, |OPTIONAL| convert_alpha : bool &lt;False&gt;)
-</code></pre>
-<pre><code class="language-python">getDrawImage() -&gt; list[pygame.Surface, pygame.Rect]
-</code></pre>
-<pre><code class="language-python">update()
-</code></pre>
-<h2 id="box-collider">Box Collider</h2>
-<pre><code class="language-python">__init__(width : int, height : int, |OPTIONAL| ghost : bool &lt;False&gt;, is_platform : bool &lt;False&gt;)
-</code></pre>
-<h4 id="variables_2">Variables</h4>
-<pre><code class="language-python">width : int
-</code></pre>
-<pre><code class="language-python">height : int
-</code></pre>
-<pre><code class="language-python">ghost : bool
-</code></pre>
-<pre><code class="language-python">is_platform : bool
-</code></pre>
-<pre><code class="language-python">collide_objects : list
-</code></pre>
-<h4 id="methods_2">Methods</h4>
-<pre><code class="language-python">start()
-</code></pre>
-<pre><code class="language-python">checkCollision(axis : str)
-</code></pre>
-<pre><code class="language-python">update()
-</code></pre>
-<h2 id="rigidbody">Rigidbody</h2>
-<pre><code class="language-python">__init__(app : godity.core.App, |OPTIONAL| velocity : float &lt;2&gt;, mass : float &lt;1&gt;, use_gravity : bool &lt;True&gt;, drop_platform_key : int &lt;pygame.K_DOWN&gt;)
-</code></pre>
-<h4 id="variables_3">Variables</h4>
-<pre><code class="language-python">velocity : float
-</code></pre>
-<pre><code class="language-python">mass : float
-</code></pre>
-<pre><code class="language-python">use_gravity : bool
-</code></pre>
-<pre><code class="language-python">gravity : float &lt;0&gt;
-</code></pre>
-<pre><code class="language-python">direction : godity.math.Vector2
-</code></pre>
-<pre><code class="language-python">drop_platform_key : int
-</code></pre>
-<pre><code class="language-python">on_ground : bool
-</code></pre>
-<pre><code class="language-python">is_jumping : bool
-</code></pre>
-<pre><code class="language-python">platform_drop : bool
-</code></pre>
-<pre><code class="language-python">air_time : float
-</code></pre>
-<h4 id="methods_3">Methods</h4>
-<pre><code class="language-python">start()
-</code></pre>
-<pre><code class="language-python">move()
-</code></pre>
-<pre><code class="language-python">jump(force : float)
-</code></pre>
-<pre><code class="language-python">update()
-</code></pre>
-<h2 id="camera">Camera</h2>
-<pre><code class="language-python">__init__(screen_width : int, screen_height : int, |OPTIONAL| offset_x : int &lt;0&gt;, offset_y : int &lt;0&gt;)
-</code></pre>
-<h4 id="variables_4">Variables</h4>
-<pre><code class="language-python">screen_width : int
-</code></pre>
-<pre><code class="language-python">screen_height : int
-</code></pre>
-<pre><code class="language-python">offset_x : int
-</code></pre>
-<pre><code class="language-python">offset_y : int
-</code></pre>
-<h4 id="methods_4">Methods</h4>
-<pre><code class="language-python">start()
-</code></pre>
-<pre><code class="language-python">apply(rect : pygame.Rect)
-</code></pre>
-<pre><code class="language-python">update()
-</code></pre>
 <h2 id="animation">Animation</h2>
-<pre><code class="language-python">__init__(name : str, image_name : str, area_list : list, frame_delay: float)
+<pre><code class="language-python">__init__(name : str, image_name : str, area_list : list, |OPTIONAL| frame_delay : float &lt;0&gt;, delay_list : list &lt;None&gt;, auto_play : bool &lt;False&gt;)
 </code></pre>
-<h5 id="variables_5">Variables</h5>
-<pre><code class="language-python">image_name : str
+<h5 id="variables">Variables</h5>
+<pre><code class="language-python">image_name  : str
+area_list   : list
+frame_delay : float
+delay_list  : list
 </code></pre>
-<pre><code class="language-python">area_list : list
-</code></pre>
-<pre><code class="language-python">frame_delay : float
-</code></pre>
-<h5 id="methods_5">Methods</h5>
-<pre><code class="language-python">start()
-</code></pre>
+<h5 id="methods">Methods</h5>
 <pre><code class="language-python">run()
 </code></pre>
 <pre><code class="language-python">pause()
 </code></pre>
 <pre><code class="language-python">restart()
 </code></pre>
+<pre><code class="language-python">getFrame() -&gt; float
+</code></pre>
 <pre><code class="language-python">getState() -&gt; str
 </code></pre>
 <pre><code class="language-python">getArea() -&gt; tuple
 </code></pre>
-<pre><code class="language-python">update()
+<h2 id="boxcollider">BoxCollider</h2>
+<pre><code class="language-python">__init__(width : int, height : int, |OPTIONAL| ghost : bool &lt;False&gt;, is_platform : bool &lt;False&gt;)
+</code></pre>
+<h5 id="variables_1">Variables</h5>
+<pre><code class="language-python">width           : int
+height          : int
+ghost           : bool
+is_platform     : bool
+collide_objects : dict
+</code></pre>
+<h5 id="methods_1">Methods</h5>
+<pre><code class="language-python">checkCollision(axis : str)
+</code></pre>
+<h2 id="camera">Camera</h2>
+<pre><code class="language-python">__init__(screen_width : int, screen_height : int, |OPTIONAL|, offset_x : int &lt;0&gt;, offset_y : int &lt;0&gt;, max_width : int &lt;0&gt;, max_height : int &lt;0&gt;)
+</code></pre>
+<h5 id="variables_2">Variables</h5>
+<pre><code class="language-python">screen_width  : int
+screen_height : int
+offset_x      : int
+offset_y      : int
+max_width     : int
+max_height    : int
+</code></pre>
+<h5 id="methods_2">Methods</h5>
+<pre><code class="language-python">apply(rect : pygame.Rect)
+</code></pre>
+<h2 id="light">Light</h2>
+<pre><code class="language-python">__init__(app : godity.core.App, radius : int, |OPTIONAL| color : tuple &lt;(255,255,255)&gt;, image_name : str &lt;None&gt;, follow_camera : bool &lt;True&gt;, smooth_scale : bool &lt;False&gt;)
+</code></pre>
+<h5 id="variables_3">Variables</h5>
+<pre><code class="language-python">radius        : int
+color         : tuple
+image_name    : str
+follow_camera : bool
+smooth_scale  : bool
+</code></pre>
+<h5 id="methods_3">Methods</h5>
+<pre><code class="language-python">getDrawImage() -&gt; list [pygame.Surface, pygame.Rect]
+</code></pre>
+<h2 id="rigidbody">Rigidbody</h2>
+<pre><code class="language-python">__init__(app, |OPTIONAL| velocity : float &lt;2&gt;, mass : float &lt;3&gt;, use_gravity : bool &lt;True&gt;, drop_platform_key : int &lt;pygame.K_DOWN&gt;)
+</code></pre>
+<h5 id="variables_4">Variables</h5>
+<pre><code class="language-python">air_time          : float
+velocity          : float
+mass              : float
+use_gravity       : bool
+drop_platform_key : int
+direction         : godity.math.Vector2
+gravity           : float &lt;0&gt;
+on_ground         : bool
+is_jumping        : bool
+platform_drop     : bool
+</code></pre>
+<h5 id="methods_4">Methods</h5>
+<pre><code class="language-python">move()
+</code></pre>
+<pre><code class="language-python">jump(force : float)
+</code></pre>
+<h2 id="spriterenderer">SpriteRenderer</h2>
+<pre><code class="language-python">__init__(app : godity.core.App, image_name : str, |OPTIONAL| area : tuple &lt;None&gt;, tile_width : int &lt;0&gt;, tile_height : int &lt;0&gt;, offset_x : int &lt;0&gt;, offset_y : int &lt;0&gt;, flip_x : bool &lt;False&gt;, flip_y : bool &lt;False&gt;, smooth_scale : bool &lt;False&gt;, follow_camera : bool &lt;True&gt;)
+</code></pre>
+<h5 id="variables_5">Variables</h5>
+<pre><code class="language-python">image_name    : str
+area          : tuple
+tile_width    : int
+tile_height   : int
+offset_x      : int
+offset_y      : int
+flip_x        : bool
+flip_y        : bool
+smooth_scale  : bool
+follow_camera : bool
+rect          : pygame.Rect
+</code></pre>
+<h5 id="methods_5">Methods</h5>
+<pre><code class="language-python">updateRect()
+</code></pre>
+<pre><code class="language-python">setArea(area : tuple)
+</code></pre>
+<pre><code class="language-python">setFlip(x : bool, y : bool)
+</code></pre>
+<pre><code class="language-python">setImage(image_path : str, |OPTIONAL| convert_alpha : False)
+</code></pre>
+<pre><code class="language-python">getDrawImage() -&gt; list [pygame.Surface, pygame.Rect]
 </code></pre>
 <h2 id="tilemap">Tilemap</h2>
-<pre><code class="language-python">__init__(file_path : str, |OPTIONAL| alpha_background : bool &lt;False&gt;)
+<pre><code class="language-python">__init__(file_path : str, |OPTIONAL| object_offset_x : int &lt;0&gt;, object_offset_y : int &lt;0&gt;)
 </code></pre>
 <h5 id="variables_6">Variables</h5>
-<pre><code class="language-python">tmx_data : pytmx.pytmx.TiledMap
-</code></pre>
-<pre><code class="language-python">width : int
-</code></pre>
-<pre><code class="language-python">height : int
-</code></pre>
-<pre><code class="language-python">image : pygame.Surface()
+<pre><code class="language-python">tmx_data        : pytmx.pytmx.TiledMap
+width           : int
+height          : int
+object_offset_x : int
+object_offset_y : int
+image           : pygame.Surface
 </code></pre>
 <h5 id="methods_6">Methods</h5>
-<pre><code class="language-python">start()
+<pre><code class="language-python">getDrawImage() -&gt; list [pygame.Surface, pygame.Rect]
 </code></pre>
-<pre><code class="language-python">getDrawImage() -&gt; list[pygame.Surface, pygame.Rect]
+<h2 id="transform">Transform</h2>
+<pre><code class="language-python">__init__(|OPTIONAL| position : godity.math.Vector2 &lt;None&gt;, scale : godity.math.Vector2 &lt;None&gt;, rotation : int &lt;0&gt;)
 </code></pre>
-<pre><code class="language-python">update()
+<h5 id="variables_7">Variables</h5>
+<pre><code class="language-python">position : godity.math.Vector2
+scale    : godity.math.Vector2
+rotation : int
+</code></pre>
+<h5 id="methods_7">Methods</h5>
+<pre><code class="language-python">move(vector2 : godity.math.Vector2)
+</code></pre>
+<pre><code class="language-python">rotate(angle : int)
+</code></pre>
+<pre><code class="language-python">setRotation(vector2 : godity.math.Vector2)
+</code></pre>
+<pre><code class="language-python">setPosition(vector2 : godity.math.Vector2)
+</code></pre>
+<pre><code class="language-python">setPositionX(value : float)
+</code></pre>
+<pre><code class="language-python">setPositionY(value : float)
+</code></pre>
+<pre><code class="language-python">setScale(vector2 : godity.math.Vector2)
+</code></pre>
+<pre><code class="language-python">setScaleX(value : float)
+</code></pre>
+<pre><code class="language-python">setScaleY(value : float)
+</code></pre>
+<pre><code class="language-python">updateChildrenPosition()
 </code></pre>
               
             </div>

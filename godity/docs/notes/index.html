@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Release Notes - Godity Framework</title>
+  <title>Release Notes - Godity Framework Docs</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -38,7 +38,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Godity Framework</a>
+        <a href=".." class="icon icon-home"> Godity Framework Docs</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -78,7 +78,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Godity Framework</a>
+        <a href="..">Godity Framework Docs</a>
       </nav>
 
       
@@ -105,27 +105,29 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="release-05">Release 0.5</h1>
+                <h1 id="release-09">Release 0.9</h1>
 <ul>
-<li>New dependence<ul>
-<li>pytmx</li>
-</ul>
-</li>
-<li>New general function.</li>
-<li>New parameters and attributes in BoxCollider Component.</li>
-<li>New function in Rigidbody Component and new attributes.</li>
-<li>New functions and parameters in App class.</li>
-<li>New function in Entity class.</li>
-<li>New parameters, attributes and functions in Sprite Renderer Component.</li>
-<li>Removed the "surface" parameter from the render function of the Scene class.</li>
-<li>Improvements in physics.</li>
-<li>It is now possible to choose the rendering color of physics, this option is in the App class, called "physics_color".</li>
-<li>The scene class has new parameters.</li>
-<li>New components:<ul>
-<li>Animation</li>
-<li>Tilemap</li>
-</ul>
-</li>
+<li>New parameter in sprite renderer component.</li>
+<li>New parameters in the Scene class.</li>
+<li>New parameters in the Camera component.</li>
+<li>New methods in the Scene class.</li>
+<li>New method in Animation component.</li>
+<li>New parameters in the Animation component.</li>
+<li>The attribute collide_objects of component BoxCollider is now a dict.</li>
+<li>The parameter frame_delay of Animation component does not longer obligatory.</li>
+<li>New class, Layer implemented in the core.</li>
+<li>The box_collider and platform objects inserted by Tiled now have a tag with their respective names.</li>
+<li>The updateChildrenPosition method parameters of the Transform component have been removed.</li>
+<li>New component Light.</li>
+<li>New methods in Entity class.</li>
+<li>The parent method of the Entity class has two new parameters.</li>
+<li>New methods in Vector2 class.</li>
+<li>Removed the alpha_background parameter of the Tilemap component, maps with a transparent background are now automatically recognized.</li>
+<li>New parameters in Tilemap component.</li>
+<li>The method add of Scene class have a new obligatory parameter called layer.</li>
+<li>Solved the bug of sprite sheets that were giving bugs of transparency with the color (0,0,0).</li>
+<li>Rotation of sprites that were buggy has been fixed.</li>
+<li>It is now possible to create layers and place them in any scene. </li>
 </ul>
               
             </div>
